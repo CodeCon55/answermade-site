@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy | Answermade</title>
+<meta name="description" content="Answermade answers your business phone when your team can't. AI receptionists and website chat assistants for Canadian businesses.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0F1F3D; --muted:#55657F; --bg:#F5F8FD; --card:#FFFFFF;
+    --teal:#2563EB; --teal-d:#1D4ED8; --teal-l:#E3ECFD;
+    --orange:#1D4ED8; --orange-l:#EEF2F8; --line:#DFE6F1;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Cabin',Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:17px}
+  h1,h2,h3{font-family:'Cabin',Arial,sans-serif;line-height:1.15}
+  a{color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:10;background:rgba(245,248,253,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .logo{font-family:'Cabin';font-weight:700;font-size:24px;text-decoration:none;display:flex;align-items:center;gap:10px}
+  .logo-dot{width:30px;height:30px;border-radius:9px;background:var(--teal);display:grid;place-items:center}
+  .logo-dot svg{width:17px;height:17px}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{text-decoration:none;font-weight:500;font-size:15px;color:var(--muted)}
+  .navlinks a:hover{color:var(--ink)}
+  .btn{display:inline-block;text-decoration:none;font-weight:600;padding:13px 24px;border-radius:12px;transition:.15s}
+  .btn-main{background:var(--orange);color:#fff}
+  .btn-main:hover{background:#1E40AF}
+  .btn-ghost{border:2px solid var(--ink);color:var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:#fff}
+  .navlinks .btn{color:#fff;padding:10px 18px}
+
+  /* hero */
+  .hero{padding:88px 0 72px}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+  .eyebrow{font-size:14px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--teal);margin-bottom:16px}
+  .hero h1{font-size:60px;margin-bottom:22px}
+  .hero h1 span{color:var(--teal)}
+  .hero p.lead{font-size:20px;color:var(--muted);margin-bottom:32px;max-width:560px}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+
+  /* phone mock */
+  .phone{background:var(--ink);border-radius:36px;padding:16px;max-width:360px;margin-left:auto;box-shadow:0 30px 60px rgba(15,31,61,.25)}
+  .screen{background:#fff;border-radius:24px;padding:26px 22px}
+  .call-top{text-align:center;padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:18px}
+  .call-top .ring{width:64px;height:64px;border-radius:50%;background:var(--teal-l);display:grid;place-items:center;margin:0 auto 10px}
+  .call-top .ring svg{width:28px;height:28px}
+  .call-top b{display:block;font-family:'Cabin';font-size:19px}
+  .call-top small{color:var(--teal);font-weight:600;font-size:13px}
+  .bubble{font-size:14px;padding:10px 14px;border-radius:14px;margin-bottom:10px;max-width:88%}
+  .b-ai{background:var(--teal-l)}
+  .b-caller{background:var(--orange-l);margin-left:auto}
+  .captured{margin-top:16px;background:var(--bg);border-radius:12px;padding:12px 14px;font-size:13px}
+  .captured b{display:block;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+
+  /* sections */
+  section{padding:80px 0}
+  .sec-head{max-width:680px;margin-bottom:48px}
+  .sec-head h2{font-size:42px;margin-bottom:14px}
+  .sec-head p{color:var(--muted);font-size:19px}
+  .white{background:#fff}
+
+  .problem{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .pcard{background:var(--bg);border-radius:18px;padding:28px}
+  .pcard .icon{font-size:30px;margin-bottom:12px}
+  .pcard h3{font-size:21px;margin-bottom:8px}
+  .pcard p{color:var(--muted);font-size:16px}
+
+  .features{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .fcard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px;display:flex;gap:18px}
+  .fcard .num{flex:none;width:44px;height:44px;border-radius:12px;background:var(--teal);color:#fff;display:grid;place-items:center;font-family:'Cabin';font-weight:700;font-size:18px}
+  .fcard h3{font-size:21px;margin-bottom:6px}
+  .fcard p{color:var(--muted);font-size:16px}
+
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+  .step{background:var(--bg);border-radius:18px;padding:26px;position:relative}
+  .step::before{counter-increment:s;content:counter(s);font-family:'Cabin';font-weight:700;font-size:38px;color:var(--teal);display:block;margin-bottom:6px}
+  .step h3{font-size:19px;margin-bottom:6px}
+  .step p{font-size:15px;color:var(--muted)}
+
+  /* chat section */
+  .chat .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+  .chatbox{background:#fff;border-radius:22px;box-shadow:0 20px 50px rgba(15,31,61,.12);overflow:hidden;max-width:380px}
+  .chathead{background:var(--teal);color:#fff;padding:16px 20px;font-weight:600}
+  .chatbody{padding:20px}
+  .tag{display:inline-block;background:var(--teal-l);color:var(--teal);font-weight:600;font-size:13px;padding:5px 12px;border-radius:99px;margin-bottom:16px}
+  .ticks{list-style:none;margin:22px 0 30px}
+  .ticks li{padding-left:34px;position:relative;margin-bottom:12px}
+  .ticks li::before{content:"✓";position:absolute;left:0;top:0;width:24px;height:24px;border-radius:50%;background:var(--teal-l);color:var(--teal);font-weight:700;font-size:14px;display:grid;place-items:center}
+
+  /* pricing */
+  .plans{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:stretch}
+  @media (max-width:1100px){.plans{grid-template-columns:repeat(2,1fr)}}
+  .plan{background:#fff;border:1px solid var(--line);border-radius:22px;padding:32px 24px;display:flex;flex-direction:column}
+  .plan.pop{border:2px solid var(--teal);box-shadow:0 20px 40px rgba(37,99,235,.15);position:relative}
+  .plan.pop .badge{position:absolute;top:-14px;left:30px;background:var(--teal);color:#fff;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:99px}
+  .plan h3{font-size:22px;margin-bottom:4px}
+  .plan .for{color:var(--muted);font-size:15px;margin-bottom:20px}
+  .price{font-family:'Cabin';font-weight:700;font-size:46px}
+  .price small{display:block;font-family:'Cabin';font-weight:500;font-size:15px;color:var(--muted);margin-top:2px}
+  .plan h3{min-height:2.3em}
+  .plan .for{min-height:3.2em}
+  .plan ul{list-style:none;margin:22px 0 28px;flex:1}
+  .plan li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+  .plan li:last-child{border:none}
+  .plan .btn{text-align:center}
+  .fine{text-align:center;color:var(--muted);font-size:14px;margin-top:26px}
+
+  /* faq */
+  .faq{max-width:780px}
+  details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 24px;margin-bottom:12px}
+  summary{font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+  summary::after{content:"+";font-size:22px;color:var(--teal);line-height:1}
+  details[open] summary::after{content:"–"}
+  details p{color:var(--muted);margin-top:12px;font-size:16px}
+
+  /* final cta */
+  .final{background:var(--ink);color:#fff;text-align:center}
+  .final h2{font-size:44px;margin-bottom:14px}
+  .final p{color:#BFCBE0;font-size:19px;margin-bottom:32px}
+  .final .cta-row{justify-content:center}
+  .final .btn-ghost{border-color:#fff;color:#fff}
+  .final .btn-ghost:hover{background:#fff;color:var(--ink)}
+  footer{background:var(--ink);color:#8D9BB5;font-size:14px;padding:26px 0;border-top:1px solid #22355A}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  footer a{color:#BFCBE0}
+
+  @media (max-width:900px){
+    .hero .wrap,.chat .wrap{grid-template-columns:1fr}
+    .phone{margin:0 auto}
+    .hero h1{font-size:42px}
+    .problem,.plans{grid-template-columns:1fr}
+    .features{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr 1fr}
+    .sec-head h2,.final h2{font-size:32px}
+    .navlinks a:not(.btn){display:none}
+    .chatbox{margin:0 auto}
+  }
+  @media (max-width:520px){.steps{grid-template-columns:1fr}.hero{padding:56px 0}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="index.html" class="logo">
+      <span class="logo-dot"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
+      Answermade
+    </a>
+    <div class="navlinks">
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#chat">Website chat</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#contact" class="btn btn-main">Get started</a>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .policy{max-width:780px;padding:64px 0 80px}
+  .policy h1{font-size:44px;margin-bottom:10px}
+  .policy .updated{color:var(--muted);margin-bottom:36px}
+  .policy h2{font-size:24px;margin:36px 0 12px}
+  .policy p,.policy li{color:#33435E;margin-bottom:12px}
+  .policy ul{padding-left:22px;margin-bottom:12px}
+  .policy table{width:100%;border-collapse:collapse;margin:8px 0 16px;font-size:15px}
+  .policy th,.policy td{text-align:left;padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
+  .policy th{color:var(--ink)}
+</style>
+<main class="wrap policy">
+<h1>Privacy Policy</h1>
+<p class="updated">Last updated: November 2026</p>
+
+<p>Answermade is a small Canadian business based in Kamloops, British Columbia. We provide AI receptionists that answer phone calls, and AI chat assistants for websites, on behalf of local businesses (our "clients"). This policy explains what personal information we collect, why, and the choices you have. We follow British Columbia's <i>Personal Information Protection Act</i> (PIPA).</p>
+
+<h2>1. Who this applies to</h2>
+<ul>
+<li><b>Callers and website visitors</b> who talk to an Answermade receptionist or chat assistant while contacting one of our clients.</li>
+<li><b>Business owners</b> who use Answermade, or who contact us about it.</li>
+</ul>
+<p>When you call or chat with one of our clients, we handle your information on that business's behalf, to help it respond to you. That business is also responsible for how it uses your information after it receives it.</p>
+
+<h2>2. What we collect</h2>
+<table>
+<tr><th>When you…</th><th>We may collect</th></tr>
+<tr><td>Call a business that uses our AI receptionist</td><td>Your phone number (caller ID), a recording of the call, a written transcript, a short summary, and details you share such as your name, callback number, what you need and when you'd like to hear back.</td></tr>
+<tr><td>Chat with a business's website assistant</td><td>Your chat messages, and any details you share such as your name and phone number. We also log basic technical information, such as your IP address, to stop spam and abuse.</td></tr>
+<tr><td>Are a business owner using Answermade</td><td>Your name, business name and contact details, your business information (services, prices, hours), and payment records.</td></tr>
+</table>
+<p>Please don't share sensitive information, like credit card numbers, health details or government ID numbers, with the receptionist or chat assistant. They aren't needed and aren't designed to handle them.</p>
+
+<h2>3. Why we collect it</h2>
+<ul>
+<li>To answer your questions and pass your request to the business you contacted, usually by email right after your call or chat.</li>
+<li>So the business can call you back and keep a record of what you asked for.</li>
+<li>To keep the service working properly, fix mistakes and prevent spam or abuse.</li>
+<li>To bill our business clients and meet our legal and tax obligations.</li>
+</ul>
+<p>We don't sell personal information, and we don't use it for advertising.</p>
+
+<h2>4. Consent</h2>
+<p>Our receptionists and chat assistants tell you that you're speaking with an automated assistant. By continuing the call or chat, you agree to us collecting and using your information as described here. You can hang up or stop chatting at any time, and you can always ask to speak with the business directly.</p>
+
+<h2>5. Who we share it with</h2>
+<p>We share your information only with:</p>
+<ul>
+<li><b>The business you contacted.</b></li>
+<li><b>The service providers that run Answermade</b>, only as needed to provide the service. These include providers for phone calls and text messages (Twilio), voice AI (ElevenLabs), AI language models (such as Anthropic), website and app hosting (Render and GitHub), email delivery (Resend) and our domain and email forwarding (Porkbun).</li>
+<li><b>Authorities</b>, only if the law requires it.</li>
+</ul>
+
+<h2>6. Where it's stored</h2>
+<p>Some of our service providers store or process information outside Canada, including in the United States. Information stored outside Canada may be subject to the laws of that country, including lawful access by its authorities.</p>
+
+<h2>7. How long we keep it</h2>
+<p>We keep call recordings, transcripts and chat records only as long as needed to provide the service to the business you contacted, and then delete them. A business can ask us to delete its records sooner. Billing records are kept as long as Canadian tax law requires.</p>
+
+<h2>8. How we protect it</h2>
+<p>We use reasonable safeguards, including two-step login on our accounts, access limited to the people who need it, and service providers that encrypt data in transit.</p>
+
+<h2>9. Your rights</h2>
+<p>You can ask to:</p>
+<ul>
+<li>see the personal information we hold about you,</li>
+<li>correct it if it's wrong, or</li>
+<li>have it deleted.</li>
+</ul>
+<p>Email <a href="mailto:privacy@answermade.ca">privacy@answermade.ca</a> and we'll reply within 30 days. We may need to confirm who you are first.</p>
+
+<h2>10. Questions or complaints</h2>
+<p>Our privacy contact is Connor Nicol, owner of Answermade: <a href="mailto:privacy@answermade.ca">privacy@answermade.ca</a>. If you're not satisfied with our response, you can contact the Office of the Information and Privacy Commissioner for British Columbia.</p>
+
+<h2>11. Changes to this policy</h2>
+<p>We may update this policy from time to time. The date at the top shows when it last changed.</p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Answermade · Kamloops, BC</span>
+    <span><a href="privacy.html">Privacy</a> · <a href="mailto:connor@answermade.ca">connor@answermade.ca</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
